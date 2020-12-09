@@ -148,7 +148,7 @@ function onClickedPredict(){
     var json_data = JSON.stringify(user_data);
 
  
-    var url = "http://Sonjon.pythonanywhere.com/v1/predict/regression"; 
+    var url = "https://Sonjon.pythonanywhere.com/v1/predict/regression"; 
  
     fetch(url, {
 
@@ -182,7 +182,7 @@ function onClickedPredict(){
 
 function onPageLoad(){
   
-    var url = "http://Sonjon.pythonanywhere.com/"; 
+    var url = "https://Sonjon.pythonanywhere.com/"; 
 
     $.get(url, function(response,status){
         console.log(status);
