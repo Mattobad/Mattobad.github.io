@@ -230,6 +230,47 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+
+
+/* Dropdown menu */
+/*  */
+.dropbtn {
+	color: white;
+	padding: 5px;
+	border: none;
+  }
+  
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #4b4a4a;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: rgb(119, 113, 113);
+	padding: 12px 16px;
+	text-decoration: none;
+	
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: rgb(83, 81, 81);}
+  
+  .dropdown:hover .dropdown-content {display: block;
+	
+}
+  
+  .dropdown:hover .dropbtn {background-color: rgb(124, 121, 121);}
+
+
 /* Container */
 
 	.center {

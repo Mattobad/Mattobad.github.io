@@ -1,0 +1,23 @@
+
+
+/*------------------ FOOTER -----------------*/
+
+.footer-home {
+    position: absolute;
+    top:94%;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color: #222222;
+    color: white;
+}
+
+footer {
+    position: relative;
+    top:90%;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color: #222222;
+    color: white;
+}

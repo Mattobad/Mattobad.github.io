@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- js -->
+  <script src="js/app.js"></script>
+  <script  src="js/config.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="index.html">HousePricePredict</a>
+		  </div>
+		  <ul class="nav navbar-nav">
+			<li class="active"><a href="index.html">Home</a></li>
+			<li><a href="prediction.html">Prediction model</a></li>
+			<!-- <li><a href="#">Page 2</a></li>
+			<li><a href="#">Page 3</a></li> -->
+		  </ul>
+		</div>
+	  </nav>
+
+      <div class="container">
+        <h1>House Price Prediction</h1>
+            <div class="img"></div>
+        <form class="form">
+                <h3>Paved Drive Way</h3>
+                <div class="switch-field">
+                    <input type="radio" id="radio-paved-1" name="paved" value="Paved"/>
+                    <label for="radio-paved-1">Paved</label>
+                    <input type="radio" id="radio-paved-2" name="paved" value="Partial Paved" checked/>
+                    <label for="radio-paved-2">Partial Paved</label>
+                    <input type="radio" id="radio-paved-3" name="paved" value="Dirt/Gravel"/>
+                    <label for="radio-paved-5">Dirt/Gravel</label>
+                </div> <!--switch-field div-->
+                
+                <h3>Type of roof</h3>
+
+                <div class="switch-field">
+                    <input type="radio" id="radio-roof-1" name="roof" value="Flat" checked/>
+                    <label for="radio-roof-1">Flat</label>
+                    <input type="radio" id="radio-roof-2" name="roof" value="Gable" />
+                    <label for="radio-roof-2">Gable</label>
+                    <input type="radio" id="radio-roof-3" name="roof" value="Gambrel"/>
+                    <label for="radio-roof-3">Gabrel (Barn)</label>
+                    <input type="radio" id="radio-roof-4" name="roof" value="Hip"/>
+                    <label for="radio-roof-4">Hip</label>
+                    <input type="radio" id="radio-roof-5" name="roof" value="Mansard"/>
+                    <label for="radio-roof-5">Mansard</label>
+                    <input type="radio" id="radio-roof-6" name="roof" value="Shed"/>
+                    <label for="radio-roof-6">Shed</label>
+                </div> <!--switch-field div-->
+
+                
+                <h3>Above ground living area(sqaure feet)</h3>
+                <input class="area"  type="email" id="uiGrLivArea" class="floatLabel" name="GrLivArea" placeholder="1000" required>
+
+                <h3>Size of garage in car capacity (square feet)</h3>
+                <input class="area"  type="email" id="uiGarageCars" class="floatLabel" name="GarageCars" placeholder="1000" required>
+
+                <h3>Total square feet of basement area</h3>
+                <input class="area"  type="email" id="uiTotalBsmtSF" class="floatLabel" name="TotalBsmtSF" placeholder="1000" required>
+
+
+                <!-- BsmtFinSF1: Type 1 finished square feet -->
+                <h3>Finished square feet</h3>
+                <input class="area"  type="email" id="uiBsmtFinSF1" class="floatLabel" name="BsmtFinSF1" placeholder="1000" required>
+                
+                <!-- 2ndFlrSF: Second floor square feet -->
+                <h3>Second floor square feet</h3>
+                <input class="area"  type="email" id="ui2ndFlrSF" class="floatLabel" name="2ndFlrSF" placeholder="1000" required>
+                    
+                <h3>Exterior Quality</h3>
+                <div class="switch-field">
+                    <input type="radio" id="radio-exterior-1" name="exterior" value="Excellent"/>
+                    <label for="radio-exterior-1">Excellent</label>
+                    <input type="radio" id="radio-exterior-2" name="exterior" value="Good" checked/>
+                    <label for="radio-exterior-2">Good</label>
+                    <input type="radio" id="radio-exterior-3" name="exterior" value="Typical/Average"/>
+                    <label for="radio-exterior-3">Typical/Average</label>
+                    <input type="radio" id="radio-exterior-4" name="exterior" value="Fair"/>
+                    <label for="radio-exterior-4">Fair</label>
+                    <input type="radio" id="radio-exterior-5" name="exterior" value="Poor"/>
+                    <label for="radio-exterior-5">Poor</label>
+                
+                </div> <!--switch-field div-->
+
+                <!-- LotArea: Lot size in square feet     -->
+                <h3>Lot size in square feet</h3>
+                <input class="area"  type="email" id="uiLotArea" class="floatLabel" name="LotArea" placeholder="1000" required>
+                    
+                    
+                <!-- FullBath: Full bathrooms above grade -->
+                <h3>Full bathrooms above grade</h3>
+                <input class="area"  type="email" id="uiFullBath" class="floatLabel" name="FullBath" placeholder="1000" required>
+                    
+                <!-- MasVnrArea: Masonry veneer area in square feet -->
+                <h3>Masonry veneer area in square feet</h3>
+                <input class="area"  type="email" id="uiMasVnrArea" class="floatLabel" name="MasVnrArea" placeholder="1000" required>
+                                    
+                <!-- BsmtUnfSF: Unfinished square feet of basement area -->
+                <h3>Unfinished square feet of basement area</h3>
+                <input class="area"  type="email" id="uiBsmtUnfSF" class="floatLabel" name="BsmtUnfSF" placeholder="1000" required>
+                            
+                <h3>Kitchen Quality</h3>
+                <div class="switch-field">
+                    <input type="radio" id="radio-kitchen-1" name="kitchen" value="Excellent"/>
+                    <label for="radio-kitchen-1">Excellent</label>
+                    <input type="radio" id="radio-kitchen-2" name="kitchen" value="Good" />
+                    <label for="radio-kitchen-2">Good</label>
+                    <input type="radio" id="radio-kitchen-3" name="kitchen" value="Typical/Average" checked/>
+                    <label for="radio-kitchen-3">Typical/Average</label>
+                    <input type="radio" id="radio-kitchen-4" name="kitchen" value="Fair"/>
+                    <label for="radio-kitchen-4">Fair</label>
+                    <input type="radio" id="radio-kitchen-5" name="kitchen" value="Poor"/>
+                    <label for="radio-kitchen-5">Poor</label>
+                </div> <!--switch-field div-->
+
+                <!-- LotFrontage: Linear feet of street connected to property -->
+                <h3>Linear feet of street connected to property</h3>
+                <input class="area"  type="email" id="uiLotFrontage" class="floatLabel" name="LotFrontage" placeholder="1000" required>
+                            
+                <!-- OpenPorchSF: Open porch area in square feet -->
+                <h3>Open porch area in square feet</h3>
+                <input class="area"  type="email" id="uiOpenPorchSF" class="floatLabel" name="OpenPorchSF" placeholder="1000" required>
+                                    
+                <!-- WoodDeckSF: Wood deck area in square feet -->
+                <h3>Wood deck area in square feet</h3>
+                <input class="area"  type="email" id="uiWoodDeckSF" class="floatLabel" name="WoodDeckSF" placeholder="1000" required>
+                    
+            
+                
+                    
+                <h3>Overall Quality</h3>
+                <select class="overallQual" name="" id="uiOverallQual">
+                    <option value="" disabled="disabled" selected="selected">Choose Over Quality</option>
+                        
+                    <option>Very Excellent</option>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Above Average</option>
+                    <option>Average</option>
+                    <option>Below Average</option>
+                    <option>Fair</option>
+                    <option>Poor</option>
+                    <option>Very Poor</option>
+                </select>
+
+
+                <!-- Fireplaces: Number of fireplaces -->
+                <h3>Number of fireplaces</h3>
+                <input class="area"  type="email" id="uiFireplaces" class="floatLabel" name="Fireplaces" placeholder="1000" required>
+                    
+                <!-- 1stFlrSF: First Floor square feet  -->
+                <h3>First Floor square feet</h3>
+                <input class="area"  type="email" id="ui1stFlrSF" class="floatLabel" name="1stFlrSF" placeholder="1000" required>
+                    
+            
+                    
+                <h3>Neighborhood</h3>
+                <select class="neighborhood" name="" id="uiNeighborhood">
+                    <option value="" disabled="disabled" selected="selected">Choose Neighborhood</option>
+                    <option>Bloomington Heights</option>
+                    <option>Bluestem</option>
+                    <option>Briardale</option>
+                    <option>Brookside</option>
+                    <option>Clear Creek</option>
+                    <option>College Creek</option>
+                    <option>Crawford</option>
+                    <option>Edwards</option>
+                    <option>Gilbert</option>
+                    <option>Iowa DOT and Rail Road</option>
+                    <option>Meadow Village</option>
+                    <option>Mitchell</option>
+                    <option>North Ames</option>
+                    <option>Northridge</option>
+                    <option>Northpark Villa</option>
+                    <option>Northridge Heights</option>
+                    <option>Northwest Ames</option>
+                    <option>Old Town</option>
+                    <option>South & West of Iowa State University</option>
+                    <option>Sawyer</option>
+                    <option>Sawyer West</option>
+                    <option>Somerset</option>
+                    <option>Stone Brook</option>
+                    <option>Timberland</option>
+                    <option>Veenker</option>
+                </select>
+
+                <!-- YearBuilt: Original construction date -->
+                <h3>YearBuilt: Original construction date</h3>
+                <input class="area"  type="email" id="uiYearBuilt" class="floatLabel" name="YearBuilt" placeholder="1970" pattern="[0-9]{4}" required>
+                    
+                <!-- YearRemodAdd: Remodel date (same as construction date if no remodeling or additions) -->
+                <h3>YearRemodAdd: Remodel date (same as construction date if no remodeling or additions)</h3>
+                <input class="area"  type="email" id="uiYearRemodAdd" class="floatLabel" name="YearRemodAdd" placeholder="1970" pattern="[0-9]{4}" required> 
+                
+                <!-- YrSold: Year Sold (YYYY) -->
+                <h3>Year Sold (YYYY)</h3>
+                <input class="area"  type="email" id="uiYrSold" class="floatLabel" name="YrSold" placeholder="1970" pattern="[0-9]{4}" required>
+        
+            
+
+                
+
+                <h3>Basement Height Quality</h3>
+                <select class="bsmtQual" name="" id="uiBsmtQual">
+                    <option value="" disabled="disabled" selected="selected">Choose Basement Quality</option>
+                        
+                    <option>Excellent(100+ inches)</option>
+                    <option>Good(90-99 inches)</option>
+                    <option>Average/Typical(80-89 inches)</option>
+                    <option>Fair(70-79 inches)</option>
+                    <option>Poor(less than 70 inches)</option>
+                    <option>No Basement</option>
+                        
+                </select>
+
+                <h3>Basement Finished Area Quality</h3>
+                <select class="bsmtFinType1" name="" id="uiBsmtFinType1">
+                    <option value="" disabled="disabled" selected="selected">Choose Basement Finished Area Quality</option>
+                        
+                    <option>Good Living Quarters</option>
+                    <option>Average Living Quarters</option>
+                    <option>Below Average Living Quarters</option>
+                    <option>Average Rec Room</option>
+                    <option>Low Quality</option>
+                    <option>Unfinshed</option>
+                    <option>No Basement</option>
+                        
+                </select>
+
+
+
+            <br><br><br>
+            
+            <button class="submit" onclick="onClickedPredict()" type="button">Price Predicted:</button>
+            <div id="predictionPrice" class="result"> <h2></h2></div>
+
+            <br><br><br>
+        </form>
+    
+    </div> <!-- container -->
+
+    <br><br><br>
+
+
+    <footer>
+		<p>Sarbottam Thapa Magar@2020</p>
+		<p><strong>Contact: </strong>Sarbottam.Thapa.Magar@gmail.com</p>
+	</footer>
+
+
+</body>
+</html>
