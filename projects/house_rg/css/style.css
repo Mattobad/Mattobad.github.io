@@ -3,7 +3,7 @@
 /*------------------ FOOTER -----------------*/
 
 .footer-home {
-    position: absolute;
+    position: fixed;
     top:94%;
     width: 100%;
     text-align: center;
