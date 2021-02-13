@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- standard imports  -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/style.css">
+
+      <!-- custom js -->
+      <script src="js/app.js"></script>
+      <script src="js/config.js"></script>
+
+      <title>Quantile prediciton</title>
+  </head>
+
+  <body>
+      <!-- Navbar -->
+      <div class="navbar">
+          <a href="../../index.html"  class="navbar-items">Portfolio Website</a>
+          <div class="dropdown navbar-items">
+            <button class="dropbtn ">Projects<i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="../quantile_reg/index.html">Vehicle Interval Prediction</a>
+              <a href="../house_rg/prediction.html">House Price Prediction</a>
+              <a href="https://secret-mountain-51577.herokuapp.com/">Heart Disease Classification</a>
+            </div>
+          </div> 
+        </div><!-- navbar -->
+
+        <br><br>
+        <h2 class="title">Vehicle Price Prediction</h2>
+        <div class="container">
+          <form>
+        
+            <label for="madeby">Manufacturer</label>
+            <select name="madeby" id="select_manu"></select>
+        
+            <label for="vehilce_type">Vehilce type</label>
+            <select name="vehilce_type" id="select_type"></select>
+
+            <label for="built">Year Built</label>
+            <input type="text" id="built" name="built" placeholder="Enter the built year" pattern="\d{4}" />
+      
+            <label for="drive">Drive type</label>
+            <select id="drive" name="drive"></select>
+
+            <label for="cylinders">Cylinders</label>
+            <select id="cylinders" name="cylinders"></select>
+            
+            <label for="odometer">Odometer</label>
+            <input type="text" id="odometer" name="odometer" placeholder="Enter odometer in miles" pattern="\d+(\.\d{2})?" />
+        
+            <label for="fuel">Fuel type</label>
+            <select id="fuel" name="fuel"></select>
+
+            <label for="condition">Condition</label>
+            <select id="condition" name="condition"></select>
+        
+            <button class="submit" onclick="onClickedPredict()" type="button" >Predict</button>
+        
+          </form>
+          <br>
+          <div id="point_estimate" class="result"> <h4></h4></div>
+          <div id="interval_prediction" class="result"> <h4></h4></div>
+        </div> <!-- container -->
+
+
+        <div class="loader">
+          <img src="img/loading.gif" alt="Loading...." />
+        </div> <!-- loader -->
+        
+  </body>
+</html>
+
+
+
+
+

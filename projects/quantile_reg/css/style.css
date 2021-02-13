@@ -1,0 +1,155 @@
+
+/* General */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: rgba(51, 170, 51, .1)
+}
+
+h2.title {
+    margin: 0  5rem  0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+
+.navbar {
+    overflow: hidden;
+    background-color: #282828;
+    box-shadow: 2px 2px 6px #141414;
+    padding-left: 7rem;
+  }
+  
+  .navbar > .navbar-items, .navbar > .navbar-items>button{
+    font-size:20px;
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: #dfffff;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+  
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: #dfffff;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family:  sans-serif;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  /* Form */
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  button[type=button] {
+    background-color: #4382bd;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    position: center;
+    border-radius: 5px;
+    max-width: 50%;
+    margin: auto;
+    background-color: #b2d4ec;
+    padding: 20px;
+
+  }
+
+
+  /* loader */
+
+  .loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .loader >img {
+      width: 50px;
+    }
+
+
+    .loader.hidden {
+      animation: fadeOut 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+      100%{
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+    }
