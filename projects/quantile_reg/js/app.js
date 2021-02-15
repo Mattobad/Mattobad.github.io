@@ -32,11 +32,13 @@ function onClickedPredict(){
    // drop down list
    var condition = dropDownSelected("condition");
   
+//    var currentYear = new Date().getFullYear();
+
    //pattern for the year
     if (built == "" || !(built.match(/^(\d{4})$/))){
             window.alert("Please enter a valid date!!!");
             return false;
-    } else if (odometer == "" || !(odometer.match(/^([0-9]*[.][0-9]+)$/))){
+    }else if (odometer == "" || !(odometer.match(/^([0-9]*[.]?[0-9]+)$/))){
         window.alert("Please enter the odometer with numbers only!!!")
         return false;
     } else{
@@ -82,11 +84,16 @@ function onClickedPredict(){
             //result from server
             console.log(json)
     
+            //number formatter
+            var formatter = new Intl.NumberFormat(undefined,{
+                style: 'currency',
+                currency: 'USD'
+            });
             var pointEstimate = document.getElementById('point_estimate');
-            pointEstimate.innerHTML = "<h4><strong>Price Predicted:</strong>$" +json.mid+"</h4>"
+            pointEstimate.innerHTML = "<h4><strong>Price Predicted: </strong>"+formatter.format(json.mid)+"</h4>"
     
             var intervalPreds = document.getElementById('interval_prediction');
-            intervalPreds.innerHTML = "<h4><strong>Interval Predicted:</strong>$" +json.lower+"-$"+json.upper+"</h4>"
+            intervalPreds.innerHTML = "<h4><strong>Interval Predicted: </strong>" +formatter.format(json.lower)+" - "+formatter.format(json.upper)+"</h4>"
             // hide the loader
             loader.className += " hidden";
 
