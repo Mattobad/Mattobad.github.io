@@ -232,6 +232,15 @@ input, select, textarea {
 
 
 
+/* Ham menu */
+#nav a.myicon {
+	display: none;
+}
+
+#nav li {
+	display: inline;
+}
+
 /* Dropdown menu */
 /*  */
 .dropbtn {
@@ -290,11 +299,10 @@ input, select, textarea {
 		.container.medium {
 			width: 900px;
 		}
-#nav-menu{
-	width: 5rem;
-	display:none;
-}
+
+	
 		@media screen and (max-width: 1680px) {
+			
 
 			.container {
 				width: 1200px;
@@ -304,6 +312,7 @@ input, select, textarea {
 					width: 900px;
 				}
 
+				
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -328,33 +337,49 @@ input, select, textarea {
 					width: 75%;
 				}
 
+			#nav li {
+
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
-			/* #nav{
-				float:right;
-				width: 50% !important;;
+
+			#nav li:not(:first-child){
 				display: none;
-			} */
-			/* #nav li {
-				display: block  !important;
+		
+			}
+
+			#nav li{
+				float: left;
+			}
+
+			#nav div.dropdown {
+				display: block;
+				
 			}
 			
-			#nav-menu{
-				float:right;
-				display:block;
-			} */
-
-			.container {
-				width: 100%;
-				max-width: calc(100% - 30px);
+			#nav a.myicon {
+				display: block;
+				margin: 5px 10px 10px 0;
+				position: absolute;
+				right: 0;
+				top: 0;
 			}
-
-				.container.medium {
-					width: 100%;
-				}
-
+		
+			
+			.topnav.responsive {position: relative;}
+			.topnav.responsive li {
+				float: initial !important;
+				display: block !important;
+				text-align: left !important;
+				background-color: #282828;
+				color:white;
 		}
+
+		
+
+	}
 
 /* Row */
 

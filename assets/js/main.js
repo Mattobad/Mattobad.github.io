@@ -5,6 +5,17 @@
 */
 
 
+var navOpen=false;
+
+function myFunction() {
+	var x = document.getElementById("nav");
+	if (x.className === "topnav") {
+	  x.className += " responsive";
+	} else {
+	  x.className = "topnav";
+	}
+	
+  }
 
 
 (function ($) {
@@ -23,18 +34,6 @@
 
 	// Play initial animations on page load.
 	$window.on('load', function () {
-// var navOpen=false;
-// 		$("#nav-menu").on("click", () => {
-// 			if (!navOpen) {
-// 				console.log(navOpen);
-// 				navOpen = true;
-// 				$("#nav").css("display", "block");
-// 			} else {
-// 				console.log(navOpen);
-// 				navOpen = false;
-// 				$("#nav").css("display", "none");
-// 			}
-// 		})
 
 		window.setTimeout(function () {
 			$body.removeClass('is-preload');
