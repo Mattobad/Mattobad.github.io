@@ -47,3 +47,21 @@ function myFunction() {
 	});
 
 })(jQuery);
+
+
+function getProject(){
+	var prjt = document.getElementById('project').href;
+
+	console.log(prjt.split('#')[1]);
+	if (prjt.split('#')[1] == '#vehicle'){
+		var form = housePrjt();
+		document.getElementById('main-container').innerHTML = form;
+	}
+}
+
+function housePrjt(){
+
+	var form = '<form> <label for="condition">Condition</label><select id="condition" name="condition"></select>" <button class="submit" onclick="onClickedPredict()" type="button" >Predict</button></form>'
+
+	return form;
+}
